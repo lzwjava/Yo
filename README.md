@@ -1,0 +1,1 @@
+Cloud code project for yo. https://cn.avoscloud.com/docs/cloud_code_guide.html
