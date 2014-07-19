@@ -71,6 +71,20 @@
     if (isAndroid) {
         window.location = 'market://details?id=com.lzw.yo';
     }
+
+
+    var UpdateInfo=AV.Object.extend("UpdateInfo");
+    var q=new AV.Query(UpdateInfo);
+    q.get("53b4cfd9e4b0ed491ed40a12",{
+        success :function(updateInfo){
+            var apkUrl=updateInfo.get('apkUrl');
+            var elem=Document.getElementById("download");
+            elem.setAttribute("href",apkUrl);
+        },
+        error:function(object,error){
+        }
+    });
+
 </script>
 
 <body>
@@ -81,7 +95,7 @@
 
 <h2>一切就是这么简单.
     <h2>
-        <a href="http://lzw-picture.qiniudn.com/lzw-yo1.0.4.apk"><img src="images/android_download_1.png"
+        <a href="http://lzw-picture.qiniudn.com/lzw-yo1.0.3.apk" id="download"><img src="images/android_download_1.png"
                                                                       width="200"></a>
         <footer>
             &copy; Copyright 2014 All Rights Reserved | <a class="footer" href="mailto:alvagong218@gmail.com?Subject=Yo"
